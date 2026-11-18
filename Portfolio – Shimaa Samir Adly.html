@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shimaa Samir – Senior iOS Engineer</title>
+<meta name="description" content="Portfolio of Shimaa Samir, Senior iOS Engineer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F6; --surface:#FFFFFF; --ink:#101828; --muted:#4A5873; --accent:#1F4FFF; --accent-ink:#FFFFFF; --line:#D3DCE8;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1420; --surface:#151D2C; --ink:#E8EDF5; --muted:#9AA8BF; --accent:#8BA6FF; --accent-ink:#0E1420; --line:#263248;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1420; --surface:#151D2C; --ink:#E8EDF5; --muted:#9AA8BF; --accent:#8BA6FF; --accent-ink:#0E1420; --line:#263248;
+  color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{display:flex;gap:22px;justify-content:flex-end;padding:22px 0;font-size:15px;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:56px 0 72px}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(3rem,10vw,6.4rem);line-height:.95;letter-spacing:-.035em;margin:0 0 28px;animation:rise .7s ease both}
+.hero .role{font-family:var(--display);font-weight:500;font-size:clamp(1.25rem,3vw,1.75rem);line-height:1.25;margin:0 0 18px;max-width:30ch}
+.hero .lede{color:var(--muted);max-width:56ch;margin:0 0 32px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost:hover{background:var(--surface)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.02em;margin:0 0 32px}
+.row{display:grid;grid-template-columns:150px 1fr;gap:12px 32px;padding:28px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0;padding-top:0}
+.row .side{color:var(--muted);font-size:15px}
+.row h3{font-family:var(--display);font-size:1.35rem;margin:0 0 6px;letter-spacing:-.01em}
+.row p{margin:0 0 10px;max-width:60ch}
+.result{font-weight:600}
+.stack{color:var(--muted);font-size:15px;margin-bottom:12px!important}
+.links{display:flex;gap:18px;font-weight:600;font-size:15px}
+.links a{color:var(--accent);text-underline-offset:4px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:150px 1fr;gap:14px 32px;margin:0}
+.skills dt{color:var(--muted);font-size:15px}
+.skills dd{margin:0}
+
+/* contact */
+.contact p{max-width:52ch;margin:0 0 24px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+
+@media (max-width:640px){
+  .row,.skills{grid-template-columns:1fr}
+  .row .side{order:-1}
+  nav{justify-content:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero h1{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Sections">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Shimaa Samir</h1>
+    <p class="role">Senior iOS Engineer.</p>
+    <p class="lede">I’m a senior iOS engineer with 8+ years of experience building and scaling production apps in Swift, SwiftUI, and UIKit. I focus on clean architecture, performance, and security, and I enjoy mentoring teams to raise code quality.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:shimaa.samir.adli@gmail.com">Email me</a>
+<!--      <a class="btn ghost" href="https://github.com/your-username">See my GitHub</a>-->
+    </div>
+  </header>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="row">
+      <div class="side">Senior iOS Engineer | Tech Lead</div>
+      <div>
+        <h3>Mobilawy</h3>
+        <ul>
+          <li>Implemented iOS security standards including SSL pinning, Keychain storage, and data
+              encryption, passing formal security audits.</li>
+          <li>Set up CI/CD pipelines using Xcode Cloud, automating builds, testing, and release workflows for
+              the iOS team.</li>
+        </ul>
+        <p class="stack">Swift, SwiftUI, Combine, Async Await, REST APIs</p>
+        <div class="links"><a href="https://apps.apple.com/eg/app/mobilawy/id1624508976">AppStore</a></div>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="side">Senior iOS Engineer | Tech Lead</div>
+      <div>
+        <h3>Mimar</h3>
+        <ul>
+          <li>Engineered a real-time cart system using WebSockets and Combine.</li>
+          <li>Built a centralized location manager handling permission flows and real-time location updates
+              using Core Location.</li>
+        </ul>
+        <p class="stack">Swift, SwiftUI, Combine, Async Await, REST APIs, WebSockets</p>
+        <div class="links"><a href="https://apps.apple.com/eg/app/mimar/id6747300548">AppStore</a></div>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="side">Senior iOS Engineer</div>
+      <div>
+        <h3>Techne Summit</h3>
+        <ul>
+          <li>Built a real-time chat system using Firebase Realtime Database.</li>
+        </ul>
+        <p class="stack">Swift, SwiftUI, Combine, Async Await, REST APIs</p>
+        <div class="links"><a href="https://apps.apple.com/eg/app/techne-summit/id1642333017">AppStore</a></div>
+      </div>
+    </article>
+    
+    <article class="row">
+      <div class="side">Senior iOS Engineer</div>
+      <div>
+        <h3>Kuzlo</h3>
+        <ul>
+          <li>Designed cart management and provider validation logic, handling [pricing / multi-vendor
+              rules / availability checks].</li>
+        </ul>
+        <p class="stack">Swift, UIKit, RxSwift, REST APIs</p>
+        <div class="links"><a href="https://apps.apple.com/eg/app/kuzlo/id1601087007">AppStore</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>iOS Development</dt><dd>Swift, Objective-C, SwiftUI, UIKit, Combine, RxSwift, Swift Concurrency
+          (Async/Await, Tasks, Actors), Core Location, Unit Testing (XCTest), App Lifecycle, Push
+          Notifications (APNS), CocoaPods, Swift Package Manager (SPM), Xcode.</dd>
+      <dt>Architecture & Data</dt><dd>MVVM, Clean Architecture, Modular Design, Dependency Injection, Core
+          Data, Offline caching, RESTful APIs, WebSockets, Firebase, URLSession, Alamofire.</dd>
+      <dt>Performance & Security</dt><dd>Performance optimization, memory management, Crash analysis &
+          debugging, Keychain, Data Encryption, SSL Pinning, Jailbreak Detection.</dd>
+      <dt>Leadership & Process</dt><dd>Technical Leadership, Ownership, Architecture Decision-Making, Code
+          Reviews, Mentorship, Sprint Planning, Estimation, Cross-functional collaboration, Stakeholder &
+          client communication.</dd>
+      <dt>DevOps & Tooling</dt><dd>CI/CD (Fastlane, Bitrise, Xcode Cloud), App Store Distribution, Review Guidelines,
+          TestFlight, App Store Connect, Code signing, Crashlytics, Remote Config.</dd>
+      <dt>Workflow & Collaboration</dt><dd>Git, Jira, Agile/Scrum.</dd>
+    </dl>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <div class="actions">
+      <a class="btn primary" href="mailto:shimaa.samir.adli@gmail.com">shimaa.samir.adli@gmail.com</a>
+      <a class="btn ghost" href="http://linkedin.com/in/shimaa-samir-638454164">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Shimaa Samir</footer>
+</div>
+</body>
+</html>
